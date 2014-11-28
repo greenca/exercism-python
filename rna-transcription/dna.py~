@@ -1,0 +1,6 @@
+def to_rna(dna):
+    return ''.join(map(to_comp, dna))
+
+def to_comp(nuc):
+    comp = {'G':'C', 'C':'G', 'T':'A', 'A':'U'}
+    return comp[nuc]

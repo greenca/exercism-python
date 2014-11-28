@@ -1,0 +1,31 @@
+def meetup_day(year, month, weekday, option):
+
+    if option == '1st':
+        return meetup_day_count(year, month, weekday, 1)
+    
+    if option == '2nd':
+        return meetup_day_count(year, month, weekday, 2)
+
+    if option == '3rd':
+        return meetup_day_count(year, month, weekday, 3)
+
+    if option == '4th':
+        return meetup_day_count(year, month, weekday, 4)
+
+    if option == 'last':
+        return meetup_day_last(year, month, weekday)
+
+    if option == 'teenth':
+        return meetup_day_teenth(year, month, weekday)
+
+    raise Exception('Invalid option')
+
+
+def meetup_day_count(year, month, weekday, count):
+    return 0
+
+def meetup_day_last(year, month, weekday):
+    return 0
+
+def meetup_day_teenth(year, month, weekday):
+    return 0
