@@ -1,4 +1,4 @@
-def sum_of_multiples(n, factors=[3,5]):
+def sum_of_multiples(n, factors=(3,5)):
     
     multiples = []
     for factor in factors:
