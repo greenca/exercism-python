@@ -5,16 +5,10 @@ class School():
         self.db = {}
 
     def add(self, name, grade):
-        if grade in self.db:
-            self.db[grade].add(name)
-        else:
-            self.db[grade] = {name}
+        self.db[grade] = self.db.get(grade,set()).union({name})
 
     def grade(self, num):
-        if num in self.db:
-            return self.db[num]
-        else:
-            return set()
+        return self.db.get(num,set())
     
     def sort(self):
         students = {}
