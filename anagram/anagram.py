@@ -1,8 +1,7 @@
 def detect_anagrams(word, pos_anagrams):
 
     w = word.lower()
-    ref = list(w)
-    ref.sort()
+    ref = sorted(w)
 
     anagrams = []
     for p in pos_anagrams:
@@ -10,8 +9,7 @@ def detect_anagrams(word, pos_anagrams):
         if p.lower() == w:
             continue
 
-        test = list(p.lower())
-        test.sort()
+        test = sorted(p.lower())
 
         if test == ref:
             anagrams.append(p)
