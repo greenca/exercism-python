@@ -1,3 +1,5 @@
+from fractions import gcd
+
 def primitive_triplets(b):
     if b % 2 == 1:
         raise ValueError
@@ -43,18 +45,4 @@ def coprime_factors(x):
     return pairs
 
 def is_coprime(m, n):
-    # Check if a pair of numbers are coprime
-    mf = prime_factors(m)
-    nf = prime_factors(n)
-    return mf.intersection(nf) == set()
-
-def prime_factors(num):
-    # Return set of prime factors
-    factors = set()
-    for factor in xrange(2, num+1):
-        while num % factor == 0:
-            factors.add(factor)
-            num /= factor
-        if num == 1:
-            break
-    return factors
+    return gcd(m, n) == 1
