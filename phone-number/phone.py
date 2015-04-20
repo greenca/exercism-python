@@ -13,4 +13,4 @@ class Phone:
         return self.number[:3]
 
     def pretty(self):
-        return '(' + self.number[:3] + ') ' + self.number[3:6] + '-' + self.number[6:]
+        return '(%s) %s-%s' % (self.number[:3], self.number[3:6], self.number[6:])
